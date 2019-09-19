@@ -1,19 +1,18 @@
 const data = RICKANDMORTY.results;
 const menuFiltro = document.getElementById("filtro-tipos");
-
-
+const filtroStatus = document.getElementById("filtro-status");
 
 menuFiltro.addEventListener("change", funcao);
 
 function funcao() {
-    console.log(menuFiltro.value)
-   selecionados(app.filterData(data, menuFiltro.value));
+    selectionCard(app.filterData(data, menuFiltro.value));
 };
 
 
 window.onload = () => {
     carregaMenuTipos(data);
-    selecionados(data)
+    selectionCard(data);
+    carregaMenuStatus(data);
 }
 
 function carregaMenuTipos(data) {
@@ -33,13 +32,12 @@ function carregaMenuTipos(data) {
 
 }
 
-function selecionados(arr) {
+function selectionCard(arr) {
     const mostrarCardsDiv = document.getElementById ("main");
-    // mostrarCardsDiv.innerHTML ="";
     let layout = "";
     arr.forEach(data => {
         layout += `
-        <div>
+        <div class ="card">
           <img src="${data.image}"/>
           <h4><p class ="name">Name:${data.name}</p></h4>
           <h5><p class ="gender">Gender:${data.gender}</p></h5>
@@ -49,30 +47,23 @@ function selecionados(arr) {
     mostrarCardsDiv.innerHTML = layout
 }
 
+filtroStatus.addEventListener("change", funcaoStatus);
 
+function funcaoStatus() {
+    selectionCard(app2.filterStatus(data, filtroStatus.value))}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function carregaMenuStatus(data) {
+    const rickandmortystatus = [];
+    data.map(item => {
+        if(!rickandmortystatus.includes(item.status)) {
+            rickandmortystatus.push(item.status);
+        } else {
+            return false;
+        }
+    });
+    
+filtroStatus.innerHTML="";
+filtroStatus.innerHTML=`<option value ="none">Filter Status</option>`;
+filtroStatus.innerHTML += rickandmortystatus.map(item => 
+    `<option value="${item}">${item}</option>`).join("");
+}
