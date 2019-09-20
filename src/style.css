@@ -1,4 +1,11 @@
 
+header{
+    background-color: black;
+    height: 100px;
+    margin: 0%;
+    padding: 5%;
+}
+
 html{
     background-color: rgb(53, 50, 50);
     margin: 0%;
@@ -8,11 +15,14 @@ html{
 
 .card{
     border-radius: 10px;
+    overflow: hidden;
     display: inline-block;
-    width: 300px;
-    height: 500px;
+    width: 200px;
+    height: 365px;
     background-color: rgb(231, 194, 71);
-    margin: 10px;
+    margin: 15px;
+    padding: 15px;
+    
    
 }
 
@@ -20,6 +30,9 @@ html{
 .image{
     text-align: center;
     border-radius: 10px;
+    width: 200px;
+    height: 200px;
+
 }
 
 .name{
@@ -27,11 +40,15 @@ html{
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-weight: bolder;
-    font-size: 17px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 10px;
     padding: 10px;
     color: black;
     font-weight: bold;
+    line-height: 18px;
+    padding-left: 15px;
+    word-wrap: normal;
+    
 
     
 }
@@ -40,29 +57,54 @@ html{
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-weight: bolder;
-    font-size: 17px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 10px;
     padding: 10px;
     color: black;
     font-weight: bold;
-    word-spacing: 5px;
+    line-height: 18px;
+    padding-left: 15px;
+    
 }
 
 .gender{
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-weight: bolder;
-    font-size: 17px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 10px;
     padding: 10px;
     color: black;
     font-weight: bold;
+    line-height: 18px;
+    padding-left: 15px;
+
+  
 }
+
+
+  
 .title{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
-    font-size: 45px;
+    font-size: 70px;
     margin:0px;
+    color: rgb(5, 104, 104);
+    text-shadow: 3px 3px #eeea09;
     
-    
+   }
+
+   .filtrogender{
+       background-color: rgb(5, 104, 104);
+       color: white;
+       height: 35px;
+       border-radius: 5px;
+   }
+
+   .filtrostatus{
+    background-color: rgb(5, 104, 104);
+    color: white;
+    height: 35px;
+    border-radius: 5px;
+
    }

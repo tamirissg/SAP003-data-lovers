@@ -1,5 +1,5 @@
 const data = RICKANDMORTY.results;
-const menuFiltro = document.getElementById("filtro-tipos");
+const menuFiltro = document.getElementById("filtro-gender");
 const filtroStatus = document.getElementById("filtro-status");
 
 menuFiltro.addEventListener("change", funcao);
@@ -38,10 +38,10 @@ function selectionCard(arr) {
     arr.forEach(data => {
         layout += `
         <div class ="card">
-          <img src="${data.image}"/>
-          <h4><p class ="name">Name:${data.name}</p></h4>
-          <h5><p class ="gender">Gender:${data.gender}</p></h5>
-          <h6><p class ="status">Status:${data.status}</p></h6>
+          <img  class ="image" src="${data.image}"/>
+          <h4><p class ="name"> <span>Name:</span> ${data.name}</p></h4>
+          <h5><p class ="gender"><span>Gender:</span>${data.gender}</p></h5>
+          <h6><p class ="status"><span>Status:</span>${data.status}</p></h6>
         </div> `
     });
     mostrarCardsDiv.innerHTML = layout
