@@ -1,66 +1,75 @@
-
+*{
+    margin: 0%;
+    padding: 0%;
+}
 header{
     background-color: black;
     height: 100px;
     margin: 0%;
     padding: 5%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: -12px 9px 47px #888787;    
 }
 
 html{
     background-color: rgb(53, 50, 50);
     margin: 0%;
     padding: 0%;
-
 }
 
 .card{
-    border-radius: 10px;
     overflow: hidden;
     display: inline-block;
     width: 200px;
-    height: 365px;
-    background-color: rgb(231, 194, 71);
+    background-color: #8080805e;
     margin: 15px;
     padding: 15px;
-    
-   
+    position: relative;
+    border-radius: 5px;
+    height: 383px;
 }
 
+span{
+     font-size: 15px;
+     text-align: center;
+    }
+
+hr{
+    border-color:grey; 
+   }
 
 .image{
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 200px;
     height: 200px;
 
 }
 
 .name{
-    
-    text-align: center;
+    text-align-last: justify;
     font-family: 'Lato', sans-serif;
     font-weight: bolder;
     font-size: 15px;
     line-height: 10px;
     padding: 10px;
-    color: black;
+    color: #bdb5b5;
     font-weight: bold;
     line-height: 18px;
     padding-left: 15px;
-    word-wrap: normal;
-    
-
-    
+    word-wrap: normal;        
 }
 
 .status{
-    text-align: center;
+    text-align-last: justify;
     font-family: 'Lato', sans-serif;
     font-weight: bolder;
     font-size: 15px;
     line-height: 10px;
     padding: 10px;
-    color: black;
+    color: #bdb5b5;
     font-weight: bold;
     line-height: 18px;
     padding-left: 15px;
@@ -68,43 +77,98 @@ html{
 }
 
 .gender{
-    text-align: center;
+    text-align-last: justify;
     font-family: 'Lato', sans-serif;
     font-weight: bolder;
     font-size: 15px;
     line-height: 10px;
     padding: 10px;
-    color: black;
+    color: #bdb5b5;
     font-weight: bold;
     line-height: 18px;
     padding-left: 15px;
-
-  
 }
 
-
+.filters{
+    padding-top: 34px;
+}
   
 .title{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     font-size: 70px;
     margin:0px;
-    color: rgb(5, 104, 104);
-    text-shadow: 3px 3px #eeea09;
-    
-   }
-
-   .filtrogender{
-       background-color: rgb(5, 104, 104);
+    color: rgb(76, 216, 216);
+    text-decoration: overline;
+    text-decoration-color: #68e87e;   
+ }
+.filtrogender{
+    background: border-box;
+    background-color: black;
        color: white;
+       width: 115px;
        height: 35px;
        border-radius: 5px;
-   }
+    }
 
-   .filtrostatus{
-    background-color: rgb(5, 104, 104);
+.filtrostatus{
+    background: border-box;
+    background-color: black;
     color: white;
+    width: 115px;
     height: 35px;
     border-radius: 5px;
+ }
+ .sort{
+    
+   background: border-box;
+   background-color: black;
+   color: white;
+   width: 115px;
+   height: 35px;
+   border-radius: 5px;
+     
+ }
 
-   }
+ 
+#main{
+    padding-top: 52px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+ @media screen and (max-width: 480px){
+    .card {
+        width: 100%;
+        height: 100%;
+        border-radius: 61px;
+        overflow: hidden;
+        float: right;
+        margin-right:0;       
+    }
+    #main 
+    {
+      padding-top: 52px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      margin: 50px;
+    } 
+    .image{ 
+        width: 100%;   
+        
+    } 
+}
+
+
+
+
+
+
+
+
+
+   

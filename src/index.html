@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Rick and Morty</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
-  </head>
-  <body>
-         <header>
-          <p class ="title">THE RICK AND MORTY</p>
-          <select class= "filtrogender" id="filtro-gender" >
-          </select>
-          <select class ="filtrostatus"id ="filtro-status">
-          </select>
-          </header>
-      
-      <div id="main"></div>   
-      <div id="cardinfo" ></div>
-      
-    <div id="root"></div>
-    
 
-    <script src="data/rickandmorty/rickandmorty_placeholder.js"></script>
-    <!-- <script src="data/rickandmorty/rickandmorty.js"></script> -->
-   
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-,user-scalable=1,maximum-scale=1">
+  <title>The Rick and Morty</title>
+  <link rel="stylesheet" href="style.css" media="screen"/>
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <p class="title">THE RICK AND MORTY</p>
+    <div class="filters">
+      <select class="filtrogender" id="filtro-gender">
+      </select>
+      <select class="filtrostatus" id="filtro-status">
+      </select>
+      <select class="sort" id="sortCharacters">
+              <option value="nune" selected>Sort</option>
+              <option value="sortAZ">A/Z</option>
+              <option value="sortZA">Z/A</option>
+      </select>
+      </div>
+  </header>
+
+
+
+
+  <div id="main"></div>
+  <div id="cardinfo"></div>
+
+  <div id="root"></div>
+
+
+  <script src="data/rickandmorty/rickandmorty_placeholder.js"></script>
+  <!-- <script src="data/rickandmorty/rickandmorty.js"></script> -->
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
