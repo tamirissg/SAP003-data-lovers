@@ -140,8 +140,12 @@ hr{
     justify-content: center;
 }
 
- @media screen and (max-width: 480px){
-    .card {
+ @media (max-width: 700px){
+
+   .title {
+       color: pink;
+   }
+    /* .card {
         width: 100%;
         height: 100%;
         border-radius: 61px;
@@ -160,7 +164,7 @@ hr{
     .image{ 
         width: 100%;   
         
-    } 
+    }  */
 }
 
 
