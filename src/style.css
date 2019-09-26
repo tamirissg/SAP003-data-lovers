@@ -94,7 +94,7 @@ hr{
 }
   
 .title{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Lalezar', cursive;
     text-align: center;
     font-size: 70px;
     margin:0px;
@@ -132,7 +132,7 @@ hr{
 
  
 #main{
-    padding-top: 52px;
+    padding-top: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -140,39 +140,72 @@ hr{
     justify-content: center;
 }
 
+.text {
+    color:  #68e87e; 
+    text-align: center;
+    margin: 15px;
+    font-size: 35px;
+    font-family: 'Lalezar', cursive;
+    text-decoration: overline;
+    text-decoration-color: rgb(76, 216, 216);  
+
+}
+
+footer{
+    background-color: black;
+    height: 80px;
+    margin: 0%;
+    padding: 5%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: -12px 9px 47px #888787;
+    padding: 5%
+ 
+
+}
+.titleFooter{
+    font-family: 'Lalezar', cursive;
+    text-align: center;
+    font-size: 40px;
+    margin:0px;
+    color: rgb(76, 216, 216);
+    text-decoration: overline;
+    text-decoration-color: #68e87e;
+    letter-spacing: 2px;
+
+}
+.textFooter{
+    font-family: 'Lalezar', cursive;
+    text-align: center;
+    font-size: 40px;
+    margin:0px;
+    color: rgb(76, 216, 216);
+    text-decoration: overline;
+    text-decoration-color: #68e87e;
+
+}
+
  @media (max-width: 700px){
 
    .title {
-       color: pink;
-   }
-    /* .card {
-        width: 100%;
-        height: 100%;
-        border-radius: 61px;
-        overflow: hidden;
-        float: right;
-        margin-right:0;       
-    }
-    #main 
-    {
-      padding-top: 52px;
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      margin: 50px;
-    } 
-    .image{ 
-        width: 100%;   
-        
-    }  */
+    font-size: 45px;
+    text-align: center;
+       
+}
+.filters{
+    text-align: right;
 }
 
+header{
+    height: 150px;
+    
+}
+.textFooter{
+    font-size: 15px;
+}
+.titleFooter{
+    font-size: 15px;
 
-
-
-
-
-
-
-
-   
+}
+}

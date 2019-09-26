@@ -1,24 +1,24 @@
 const data = RICKANDMORTY.results;
-const menuFiltro = document.getElementById("filtro-gender");
-const filtroStatus = document.getElementById("filtro-status");
+const genderFilter = document.getElementById("filter-gender");
+const statusFilter = document.getElementById("filter-status");
 const statistic = document.getElementById("calc-estatic");
 
-menuFiltro.addEventListener("change", () => {
-  funcao();
-  statistic.innerHTML = `Existem ${app.static(app.filterData(data, menuFiltro.value))} % ${menuFiltro.value}`;
+genderFilter.addEventListener("change", () => {
+  functionGender();
+  statistic.innerHTML = `There are ${app.percCalculation(app.filterData(data, genderFilter.value))} % ${genderFilter.value} of the characters`;
 });
 
-function funcao() {
-  return selectionCard(app.filterData(data, menuFiltro.value));
+function functionGender() {
+  return selectionCard(app.filterData(data, genderFilter.value));
 };
 
 window.onload = () => {
-  carregaMenuTipos(data);
+  menuGender(data);
   selectionCard(data);
-  carregaMenuStatus(data);
+  menuStatus(data);
 };
 
-function carregaMenuTipos(data) {
+function menuGender(data) {
   const rickandmortygender = [];
   data.map(item => {
     if (!rickandmortygender.includes(item.gender)) {
@@ -28,9 +28,9 @@ function carregaMenuTipos(data) {
     }
   });
 
-  menuFiltro.innerHTML = "";
-  menuFiltro.innerHTML = "<option value =\"none\">Filter Gender</option>";
-  menuFiltro.innerHTML += rickandmortygender.map(item =>
+  genderFilter.innerHTML = "";
+  genderFilter.innerHTML = "<option value =\"none\">Filter Gender</option>";
+  genderFilter.innerHTML += rickandmortygender.map(item =>
     `<option value="${item}">${item}</option>`).join("");
 
 }
@@ -50,16 +50,16 @@ function selectionCard(arr) {
   mostrarCardsDiv.innerHTML = layout;
 }
 
-filtroStatus.addEventListener("change", () => {
-  funcaoStatus();
-  statistic.innerHTML = `Existem ${app.static(app.filterStatus(data, filtroStatus.value))} % ${filtroStatus.value}`;
+statusFilter.addEventListener("change", () => {
+  functionStatus();
+  statistic.innerHTML = `There are ${app.static(app.percCalculation(data, statusFilter.value))} % ${statusFilter.value} of the characters`;
 });
 
-function funcaoStatus() {
-  selectionCard(app.filterStatus(data, filtroStatus.value));
+function functionStatus() {
+  selectionCard(app.filterStatus(data, statusFilter.value));
 }
 
-function carregaMenuStatus(data) {
+function menuStatus(data) {
   const rickandmortystatus = [];
   data.map(item => {
     if (!rickandmortystatus.includes(item.status)) {
@@ -69,13 +69,13 @@ function carregaMenuStatus(data) {
     }
   });
 
-  filtroStatus.innerHTML = "";
-  filtroStatus.innerHTML = "<option value =\"none\">Filter Status</option>";
-  filtroStatus.innerHTML += rickandmortystatus.map(item =>
+  statusFilter.innerHTML = "";
+  statusFilter.innerHTML = "<option value =\"none\">Filter Status</option>";
+  statusFilter.innerHTML += rickandmortystatus.map(item =>
     `<option value="${item}">${item}</option>`).join("");
 };
 
-const sortCharacters = document.getElementById("sortCharacters");
+const sortCharacters = document.getElementById("sort-characters");
 sortCharacters.addEventListener("change", (sortCharacters) => {
   const sortPersonas = app.sortNames(data, sortCharacters.target.value);
   selectionCard(sortPersonas);

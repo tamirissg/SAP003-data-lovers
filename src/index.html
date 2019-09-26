@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="user-scalable=1,maximum-scale=1">
   <title>The Rick and Morty</title>
-  <link rel="stylesheet" href="style.css" media="screen"/>
-  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" media="screen" />
+  <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Lalezar&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <p class="title">THE RICK AND MORTY</p>
     <div class="filters">
-      <select class="filtrogender" id="filtro-gender">
+      <select class="filtrogender" id="filter-gender">
       </select>
-      <select class="filtrostatus" id="filtro-status">
+      <select class="filtrostatus" id="filter-status">
       </select>
-      <select class="sort" id="sortCharacters">
-              <option value="nune" selected>Sort</option>
-              <option value="sortAZ">A/Z</option>
-              <option value="sortZA">Z/A</option>
+      <select class="sort" id="sort-characters">
+        <option value="nune" selected>Sort</option>
+        <option value="sortAZ">A/Z</option>
+        <option value="sortZA">Z/A</option>
       </select>
-      </div>
-   </header>
-   <p id="calc-estatic"></p>
-
-
+    </div>
+  </header>
+  <p class="text" id="calc-estatic"></p>
 
   <div id="main"></div>
   <div id="cardinfo"></div>
 
   <div id="root"></div>
-
+  <footer class="titleFooter"><span>
+    <p class="textFooter"> Data Lovers - Projeto II / Lab003</p>
+    </span>
+    <p>Rosangela/Tamiris</p>
+  </footer>
 
   <script src="data/rickandmorty/rickandmorty_placeholder.js"></script>
   <!-- <script src="data/rickandmorty/rickandmorty.js"></script> -->
@@ -40,5 +41,4 @@
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
-
 </html>
