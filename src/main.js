@@ -52,7 +52,7 @@ function selectionCard(arr) {
 
 statusFilter.addEventListener("change", () => {
   functionStatus();
-  statistic.innerHTML = `There are ${app.static(app.percCalculation(data, statusFilter.value))} % ${statusFilter.value} of the characters`;
+  statistic.innerHTML = `There are ${app.percCalculation(app.filterStatus(data, statusFilter.value))} % ${statusFilter.value} of the characters`;
 });
 
 function functionStatus() {

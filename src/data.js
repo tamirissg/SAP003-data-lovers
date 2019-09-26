@@ -11,6 +11,8 @@ function sortNames(arr, condition) {
     return arr.slice().sort((a, b) => (a.name > b.name ? 1 : -1));
   } else if (condition === "sortZA") {
     return arr.slice().sort((a, b) => (a.name > b.name ? -1 : 1));
+  } else {
+    document.location.reload(true);
   }
 };
 
