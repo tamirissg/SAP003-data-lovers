@@ -20,9 +20,14 @@ function percCalculation(data) {
   return ((data.length * 100) / 493).toFixed();
 };
 
+function filterName(data, condition) {
+  return data.slice().filter(item => item.name.toUpperCase() === condition);
+};
+
 app = {
   filterData,
   filterStatus,
   sortNames,
   percCalculation,
+  filterName,
 };

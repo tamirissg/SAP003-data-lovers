@@ -35,6 +35,7 @@ function menuGender(data) {
 
 }
 
+
 function selectionCard(arr) {
   const mostrarCardsDiv = document.getElementById("main");
   let layout = "";
@@ -78,5 +79,40 @@ function menuStatus(data) {
 const sortCharacters = document.getElementById("sort-characters");
 sortCharacters.addEventListener("change", (sortCharacters) => {
   const sortPersonas = app.sortNames(data, sortCharacters.target.value);
-  selectionCard(sortPersonas);
+  selectionCard(sortPersonas),
+  clearMessage();
 });
+
+const clearFilters = document.getElementById("btn-clear");
+clearFilters.addEventListener("click", () => {
+  return selectionCard(data), clearMessage();
+});
+
+const search = document.getElementById("btn-search");
+let textName = document.getElementById("search-character");
+search.addEventListener("click", () => {
+  const searchCharacter = app.filterName(data, textName.value.toUpperCase());
+  if(searchCharacter == ""){
+    return statistic.innerHTML = "Character not found.",
+    event.preventDefault(),
+    clearCards();
+  } else {
+    selectionCard(searchCharacter),
+    event.preventDefault(),
+    clearMessage();
+  }
+});
+
+function clearCards() {
+  const node = document.getElementById("main");
+  while (node.hasChildNodes()) {
+      node.removeChild(node.lastChild);
+  }
+};
+
+function clearMessage() {
+  const message = document.getElementById("calc-estatic");
+  while (message.hasChildNodes()) {
+    message.removeChild(message.lastChild);
+  }
+};

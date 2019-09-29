@@ -105,11 +105,16 @@ hr{
 .filtrogender{
     background: border-box;
     background-color: black;
-       color: white;
-       width: 115px;
-       height: 35px;
-       border-radius: 5px;
+    color: white;
+    width: 115px;
+    height: 35px;
+    border-radius: 5px;
     }
+
+.filtrogender:hover{
+    background-color: #68e87e;   
+ }
+ 
 
 .filtrostatus{
     background: border-box;
@@ -119,6 +124,11 @@ hr{
     height: 35px;
     border-radius: 5px;
  }
+ .filtrostatus:hover {
+    background-color: #68e87e;   
+ }
+
+ 
  .sort{
     
    background: border-box;
@@ -128,6 +138,9 @@ hr{
    height: 35px;
    border-radius: 5px;
      
+ }
+ .sort:hover{
+    background-color: #68e87e;   
  }
 
  
@@ -185,6 +198,45 @@ footer{
 
 }
 
+.btn{
+    background: border-box;
+    background-color: black;
+    color: white;
+    width: 115px;
+    height: 35px;
+    border-radius: 5px;
+   
+ }
+ .btn:hover{
+    background-color: #68e87e;   
+ }
+
+ .btn-search{
+    background: border-box;
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;   
+ }
+.btn-search:hover{
+    background-color: #68e87e;   
+}
+.search{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+ #search-character{
+    background-color:black;
+    border-radius: 5px;
+    color: white;
+    width: 150px;
+    height: 20px;
+  
+ }
+ 
+
  @media (max-width: 700px){
 
    .title {
@@ -197,14 +249,17 @@ footer{
 }
 
 header{
-    height: 150px;
-    
+    height: 200px;
+     
 }
 .textFooter{
     font-size: 15px;
 }
 .titleFooter{
     font-size: 15px;
+}
 
-}S
+#search-character{
+    width: 125px;
+}
 }
